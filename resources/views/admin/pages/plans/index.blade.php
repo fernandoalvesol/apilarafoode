@@ -39,9 +39,9 @@
                                 {{ $plan->price}}
                             </td>
                             <td style="width=10px;">
+                                <a href="{{ route('details.plan.index', $plan->url) }}" class="btn btn-primary">Detalhes</a>
                                 <a href="{{ route('plans.edit', $plan->url) }}" class="btn btn-warning">Editar</a>
                                 <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning">Exibir</a>
-                                <a href="{{ route('details.plan.index', $plan->url) }}" class="btn btn-warning">Detalhes</a>
 
                             </td>
                         </tr>

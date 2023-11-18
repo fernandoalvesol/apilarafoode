@@ -19,6 +19,10 @@ class DetailPlanController extends Controller
     }
     public function index($urlPlan){
 
+        dd('aa');
+
+        /**
+
         if(!$plan = $this->plan->where('url', $urlPlan)->first()){
             return redirec()->back();
         }
@@ -27,6 +31,6 @@ class DetailPlanController extends Controller
 
         return view('admin.pages.plans.details.index', compact('plan', 'details'));
 
-
+*/
     }
 }

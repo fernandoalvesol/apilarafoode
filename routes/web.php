@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PlanController;
+use App\Http\Controllers\Admin\DetailPlanController;
+use App\Model\DetailPlan;
 
-Route::prefix('admin')->group(function(){
-
+Route::prefix('admin')
+       ->namespace('admin') 
+       ->group(function(){
+        
 
     /**Rotas Details Plan */
     Route::get('plans/{url}/details', [DetailPlanController::class, 'index'])->name('details.plan.index');
