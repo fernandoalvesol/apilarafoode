@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\DetailPlanController;
-use App\Model\DetailPlan;
+use App\Models\DetailPlan;
 
 Route::prefix('admin')
        ->namespace('admin') 
@@ -11,6 +11,8 @@ Route::prefix('admin')
         
 
     /**Rotas Details Plan */
+    Route::post('plans/{url}/details', [DetailPlanController::class, 'store'])->name('details.plan.store');
+    Route::get('plans/{url}/details/create', [DetailPlanController::class, 'create'])->name('details.plan.create');
     Route::get('plans/{url}/details', [DetailPlanController::class, 'index'])->name('details.plan.index');
 
 

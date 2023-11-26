@@ -4,13 +4,14 @@
 
 @section('content_header')
 <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i class="fa fa-home" aria-hidden="true"></i>
+    <li class="breadcrumb-item"><a href=""><i class="fa fa-home" aria-hidden="true"></i>
 </a></li>
     <li class="breadcrumb-item"><a href="{{ route('plans.index') }}">Planos</a></li>
-    <li class="breadcrumb-item"><a href="{{ route('plans.show', $plan->url) }}">{{ $plan->name }}</a></li>
-    <li class="breadcrumb-item"><a href="{{ route('details.plan.index') }}">Detalhes</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('plans.show', $plan->url) }}">{{ $plan->name }}</a>
+</li>
+    <li class="breadcrumb-item"><a href="{{ route('details.plan.index', $plan->url)}}">Detalhes</a></li>
 </ol>
-    <h1>Detalhes do Plano {{ $plan->name }} <a href="{{ route('plans.create') }}" class="btn btn-dark"><i class="fa fa-plus-square" aria-hidden="true"></i> CADASTRAR</a></h1>
+    <h1>Detalhes do Plano {{ $plan->name }} <a href="{{ route('details.plan.create', $plan->url) }}" class="btn btn-dark"><i class="fa fa-plus-square" aria-hidden="true"></i> CADASTRAR</a></h1>
 @stop
 @section('content')
 
